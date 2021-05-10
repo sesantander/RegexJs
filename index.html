@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Document</title>
+  </head>
+  <body style="margin: 50px 50px;">
+    <h1>Expresiones regulares en javascript</h1>
+    <p>
+      Ingrese una placa para verificar su validez
+      <i>(Ejemplo: XYZ123,ABC098)</i>:
+    </p>
+    <input type="text" id="placa"/><br /><br />
+    <button onclick="vertificarplaca()">Verificar</button>
+    <h3 id="esplaca">Es una placa!</h3>
+    <h3 id="noesplaca">No es una placa</h3>
+    <p>
+      Ingrese una fecha en el formato dd/mm/aaaa para verificar su validez
+      <i>(Ejemplo: 01/01/2000)</i>:
+    </p>
+    <input type="text" id="fecha"/><br /><br />
+    <button onclick="vertificarfecha()">Verificar</button>
+    <h3 id="esfecha">Es una fecha!</h3>
+    <h3 id="noesfecha">No es una fecha</h3>
+    <script src="javascript.js"></script>
+  </body>
+</html>
