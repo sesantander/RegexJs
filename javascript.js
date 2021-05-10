@@ -10,7 +10,7 @@ function vertificarplaca() {
 
 function vertificarfecha() {
 
-  const regex = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(1[0-2]|0[1-9])\/([0-9]{4})$/;
+  const regex = /^(0[1-9]|[1-2][0-9]|3[0-1])\/(1[0-2]|0[1-9])\/([0-9]{3}[1-9])$/;
   string=document.getElementById('fecha').value
   const isExisting = regex.test(string);
   jlabel(isExisting,"fecha")
@@ -20,20 +20,14 @@ function vertificarfecha() {
   function jlabel(isExisting,elemento){
     elemento="es"+elemento
     noelemento="no"+elemento
-    elementoimg=elemento+"img"
-    noelementoimg=noelemento+"img"
     console.log(noelemento)
     if(isExisting){
       document.getElementById(elemento).style.display="block";
       document.getElementById(elemento).style.color="green";
-      document.getElementById(noelemento).style.display="none";
-      document.getElementById(elementoimg).style.display="block";      
-      document.getElementById(noelementoimg).style.display="none";      
+      document.getElementById(noelemento).style.display="none";   
   }else{
       document.getElementById(noelemento).style.display="block";         
       document.getElementById(noelemento).style.color="red";
-      document.getElementById(elemento).style.display="none";
-      document.getElementById(elementoimg).style.display="none";      
-      document.getElementById(noelementoimg).style.display="block";     
+      document.getElementById(elemento).style.display="none";  
   }
 }
